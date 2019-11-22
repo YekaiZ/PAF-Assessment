@@ -1,0 +1,17 @@
+<h2>Song Upload</h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    Title: <br>
+    <input type="text" name="title" placeholder="Song name"><br>
+    Country: <br>
+    <select name="country">
+        <option *ngFor='let a of countries' value={{a.alpha2Code}}>{{a.name}}</option>
+    </select><br>
+    Listening slots: <br>
+    <input type="number" name="slots" placeholder="3"><br>
+    Lyrics: <br>
+    <textarea name="lyrics" cols="30" rows="10"></textarea><br>
+
+    MP3 File: <br>
+    <input type="file" name="mp3file" accept="audio/*"><br>
+    <button type="submit">Upload</button>
+</form>
